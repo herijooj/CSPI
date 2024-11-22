@@ -1,0 +1,20 @@
+Calcula SPI
+
+Implementado por Eduardo Maia Machado
+2015
+
+Programa criado para fazer o calculo de SPI (Standardized Precipitation Index)
+de uma série de dados de chuva mensal.
+Para se fazer o cálculo de SPI foi usada uma função pronta do NCL, primeiramente
+o script "calcula_spi.sh" pega os dados que estão dentro do arquivo .ctl dos dados
+de entrada, depois disso os dados são convertidos para o formato .nc usando uma
+função do CDO então esses dados no novo formato entram como parâmetros no programa
+"calcula_spi.ncl" que é onde o cálculo é feito e gera uma saída no formato .txt
+que é formatada para binário com o programa "converte_txt_bin.f90"
+
+Execução:
+- Abra o arquivo /geral/programas/alias.txt
+- Copie todos os alias e cole no arquivo .bashrc que fica em sua pasta pessoal
+- Depois escreva no terminal:
+	calcula_spi [ARQUIVO_CTL] [NÚMERO_DE_MESES_PARA_SPI]
+
